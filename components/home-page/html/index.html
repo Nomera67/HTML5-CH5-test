@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH5 POC</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <date>Mardi 12 septembre 2023 </date><time>12h12</time>
+    </header>
+    <section class="main">
+        <div class="page home" id="pageHome">
+            <h1>Page d'accueil</h1>
+        </div>
+        <div class="page source" id="pageSource">
+            <div class="affichage">
+                <div class="selected-source">
+
+                </div>
+                <div class="selection">
+                    <fieldset>
+                        <legend>Sélectionnez une source :</legend>
+                        <div>
+                          <input type="radio" id="hdmi" name="drone" value="hdmi" checked />
+                          <label for="hdmi">HDMI</label>
+                        </div>
+                        <div>
+                          <input type="radio" id="tv" name="drone" value="tv" />
+                          <label for="tv">TV</label>
+                        </div>
+                        <div>
+                          <input type="radio" id="dvd" name="drone" value="dvd" />
+                          <label for="dvd">Lecteur DVD</label>
+                        </div>
+                      </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="page visio" id="pageVisio">
+            <div class="interface">
+                <div class="cadre">
+                    <img src="./assets/img/visio.jpg" class="visio-fond" alt="fond vision personne avec caméra">
+                    <img src="./assets/img/gaspard-baltazar.jpg" class="visio-retour" alt="Gaspard et Baltazar du Palmashow en visio">
+                </div>
+            </div>
+            <div class="commandes">
+                <button class="visio-controles" id="changeScreen">
+                    <i class="ri-swap-line ri-3x"></i>
+                </button>
+                <button class="visio-controles" id="mute">
+                    <i class="ri-megaphone-fill ri-3x"></i>
+                </button>
+                <button class="visio-controles" id="endCall">
+                    <i class="ri-phone-line ri-3x"></i>
+                </button>
+            </div>
+        </div>
+        <div class="page light" id="pageLight">
+            <div class="lightscreen">
+                <div class="panel">
+                    <div class="controls">
+                        <input type="range" class="slider" id="slider1" name="luminosité" min="0" max="100" value="10" />
+                        <label for="volume">Luminosité :<p id="sliderValue1"></p>%</label>
+                    </div>
+                    <div class="controls">
+                        <input type="range" class="slider" id="slider2" name="luminosité" min="0" max="100" />
+                        <label for="volume">Luminosité :<p id="sliderValue2"></p>%</label>
+                    </div>
+                    <div class="controls">
+                        <input type="range" class="slider" id="slider3" name="luminosité" min="0" max="100" value="10" />
+                        <label for="volume">Luminosité :<p id="sliderValue3"></p>%</label>
+                    </div>
+                    <div class="controls">
+                        <input type="range" class="slider" id="slider4" name="luminosité" min="0" max="100" />
+                        <label for="volume">Luminosité :<p id="sliderValue4"></p>%</label>
+                    </div>
+                </div>
+                <div class="switch">
+                    <button id="lightOn" class="visio-controles">
+                        <i class="ri-sun-fill ri-3x"></i>
+                    </button>
+                    <button id="lightOff" class="visio-controles">
+                        <i class="ri-sun-line ri-3x"></i>
+                    </button>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <footer class="bottom">
+        <button class="button" id="btnHome">
+            <i class="picto ri-home-line ri-3x"></i>
+        </button>
+        <button class="button" id="btnSource">
+            <i class="picto ri-tv-line ri-3x"></i>
+        </button>
+        <button class="button" id="btnVisio">
+            <i class="picto ri-live-fill ri-3x"></i>
+        </button>
+        <button class="button" id="btnLight">
+            <i class="picto ri-lightbulb-line ri-3x"></i>
+        </button>
+    </footer>
+    
+</body>
+</html>
